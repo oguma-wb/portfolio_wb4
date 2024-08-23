@@ -1,0 +1,206 @@
+@charset "UTF-8";
+
+html {
+    font-family: Arial, sans-serif;
+}
+
+/*===============
+ヘッダー
+===============*/
+
+
+.swiper {
+    width: 1600px;
+    max-width: 80%;
+    height: 500px;
+
+}
+
+.swiper-slide {
+    background-position: center top;
+}
+
+header {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    /* 左揃え表示 */
+    height: 100px;
+    /* 高さ指定をつけてやらないとサブメニューを開いたときに変な事になる。 */
+    max-width: 100%;
+    /* 必要性があまりわからない */
+    position: relative;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+header nav .main-menu {
+    display: flex;
+    height: 100px;
+    /* サブメニューの底辺にまで色が反映されて困るなら　heightで高さを固定してあげると解決することがあるよ。*/
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.header-list {
+    background-color: rgb(248, 103, 212);
+}
+
+.main-menu {
+    font-size: 22px;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-right: 1%;
+}
+
+.main-menu>li {
+    /*position: relative;*/
+    margin-right: 10px;
+    /* 値を調整して間隔を広げる */
+}
+
+.main-menu>li:last-child {
+    margin-right: 0;
+    /* 最後のリンクには余白を設けない */
+}
+
+.main-menu>li>a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+.sub-menu {
+    top: 100%;
+    left: 0;
+    background-color: white;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-menu>li:hover>.sub-menu {
+    /* li:hover　そこにカーソルを合わせるとこの中に書かれているcssのコードが実行される。 */
+    display: block;
+    /* javascriptに書いてあるコードとやっている事は全く一緒。どっちでも動くよ。 */
+}
+
+.sub-menu li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+}
+
+.sub-menu li a:hover {
+    background-color: rgb(142, 241, 167);
+}
+
+
+
+/*===============
+メイン
+===============*/
+
+body {
+    background-color: #f5f5ef;
+}
+
+
+.syokai-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 50px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 50px;
+    color: rgb(45, 34, 194);
+}
+
+
+.text {
+    padding-top: 15px;
+    font-size: 20px;
+}
+
+.text2 {
+    text-align: center;
+    padding-top: 15px;
+    font-size: 20px;
+}
+
+.medal {
+    color: rgb(126, 120, 120);
+    font-weight: bold;
+}
+
+.senseki {
+    color: rgb(248, 69, 69);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.senseki2 {
+    color: rgb(43, 109, 250);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.senseki3 {
+    color: rgb(4, 128, 21);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.senseki4 {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+iframe {
+    padding-top: 10px;
+}
+
+.rank {
+    background-color: #333;
+}
+
+.uresiina {
+    width: 800px;
+    height: 500px;
+    padding-top: 20px;
+}
+
+/*===============
+フッター
+===============*/
+
+/* コピーライト */
+p.copyright {
+    font-size: 0.8em;
+    /* フォントサイズを小さく設定 */
+    text-align: center;
+    /* 中央揃え */
+    margin-top: 30px;
+    /* 上の余白 */
+    background-color: gray;
+}
